@@ -1,5 +1,5 @@
 def dfs(G, x0):
-    # initialization
+    # initialiSation
     OUVERT = set()  
     couleur = {node: 'blanc' for node in G}
     parent = {node: None for node in G}
@@ -11,18 +11,38 @@ def dfs(G, x0):
     t += 1
     d[x0] = t
     
-    # main loop
     while OUVERT:
-        source = OUVERT.pop()  # take the last element of the set
-        for x in G[source]:   # for each neighbor x of the source node
+        source = OUVERT.pop() 
+        for x in G[source]:   
             if couleur[x] == 'blanc':
                 couleur[x] = 'gris'
                 OUVERT.add(x)
                 parent[x] = source
                 t += 1
                 d[x] = t
-        couleur[source] = 'noir'
-        t += 1
-        f[source] = t
+            else: 
+                couleur[source] = 'noir'
+                t += 1
+                f[source] = t
     
     return parent, f, d
+
+#declaration d'un graphe sous forme d'une liste
+G = {
+    'S':['D', 'G','A','C'],
+    'A': ['G', 'B','F','H'],
+    'B': ['H', 'E','F'],
+    'C': ['F', 'E'],
+    'D': ['H'],
+    'E': ['H','I'],
+    'F': ['I'],
+    'G': ['H'],
+    'H': ['I'],
+    'I':[]
+}
+#appel a la fonction dfs 
+dfs = dfs(G,'S')
+
+# affichage du resultat
+print(dfs)
+
