@@ -48,9 +48,10 @@ W = {
 }
 
 # appel a la fonction prim
-pi, key = prim((S, A, W), '1')
+parent, key = prim((S, A, W), '1')
 
 # affichage des resultats
-print("pi =", pi)
+print("parent =", parent)
 print("key =", key)
+
 
