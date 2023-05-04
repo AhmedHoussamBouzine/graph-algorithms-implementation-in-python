@@ -5,7 +5,7 @@ def prim(G, x0):
     visited = set()
     key = {node: float('inf') for node in S}
     parent = {node: None for node in S}
-
+    key[x0] = 0
     # boucle principale
     while Q:
         U = min(Q, key=key.get)
