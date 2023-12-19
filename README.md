@@ -46,6 +46,6 @@ Graph algorithms are fundamental in computer science, allowing us to solve vario
 Clone the repository and explore each algorithm implementations:
 
 ```bash
-git clone https://github.com/your-username/graph-algorithms-python.git
+git clone https://github.com/AhmedHoussamBouzine/graph-algorithms-implementation-in-python.git
 
 ```
